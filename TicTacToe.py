@@ -385,10 +385,10 @@ def clickWin (x, y):
     x1 = 0
     y1 = 0
     print ("single:", single, "x: ", x, "y: ", y, "comp: ", compTurn)
-    if ((not(compTurn) and x > -225 and x < -75) or (single and compTurn and x == 0)):
+    if (((not(compTurn) or not(single)) and x > -225 and x < -75) or (single and compTurn and x == 0)):
         print("entered x 0")
         x = -150
-        if ((not(compTurn) and y < 225 and y > 75) or (single and compTurn and y == 0)):
+        if (((not(compTurn) or not(single))and y < 225 and y > 75) or (single and compTurn and y == 0)):
             print("entered y 0", pressed[0])
             if (not(pressed[0])):
                 print("hi", "pressed 0")
@@ -397,7 +397,7 @@ def clickWin (x, y):
                 valid = True
                 x1 = 0
                 y1 = 0
-        elif ((not(compTurn) and y < 75 and y > -75) or (single and compTurn and y == 1)):
+        elif (((not(compTurn) or not(single)) and y < 75 and y > -75) or (single and compTurn and y == 1)):
             print("entered y 3", pressed[3])
             if (not(pressed[3])):
                 print("hi", "pressed 3")
@@ -406,7 +406,7 @@ def clickWin (x, y):
                 valid = True
                 x1 = 0
                 y1 = 1
-        elif ((not(compTurn) and y < -75 and y > -225) or (single and compTurn and y == 2)):
+        elif (((not(compTurn) or not(single)) and y < -75 and y > -225) or (single and compTurn and y == 2)):
             print("entered y 6", pressed[6])
             if (not(pressed[6])):
                 print("hi", "pressed 6")
@@ -415,10 +415,10 @@ def clickWin (x, y):
                 valid = True
                 x1 = 0
                 y1 = 2
-    elif ((not(compTurn) and x > -75 and x < 75) or (single and compTurn and x == 1)):
+    elif (((not(compTurn) or not(single)) and x > -75 and x < 75) or (single and compTurn and x == 1)):
         print("entered x")
         x = 0
-        if ((not(compTurn) and y < 225 and y > 75) or (single and compTurn and y == 0)):
+        if (((not(compTurn) or not(single)) and y < 225 and y > 75) or (single and compTurn and y == 0)):
             print("entered y 1", pressed[1])
             if (not(pressed[1])):
                 print("hi", "pressed 1")
@@ -427,7 +427,7 @@ def clickWin (x, y):
                 valid = True
                 x1 = 1
                 y1 = 0
-        elif ((not(compTurn) and y < 75 and y > -75) or (single and compTurn and y == 1)):
+        elif (((not(compTurn) or not(single)) and y < 75 and y > -75) or (single and compTurn and y == 1)):
             print("entered y 4", pressed[4])
             if (not(pressed[4])):
                 print("hi", "pressed 4")
@@ -436,7 +436,7 @@ def clickWin (x, y):
                 valid = True
                 x1 = 1
                 y1 = 1
-        elif ((not(compTurn) and y < -75 and y > -225) or (single and compTurn and y == 2)):
+        elif (((not(compTurn) or not(single)) and y < -75 and y > -225) or (single and compTurn and y == 2)):
             print("entered y 7", pressed[7])
             if (not(pressed[7])):
                 print("hi", "pressed 7")
@@ -445,12 +445,12 @@ def clickWin (x, y):
                 valid = True
                 x1 = 1
                 y1 = 2
-    elif ((not(compTurn) and x > 75 and x < 225) or (single and compTurn and x == 2)):
+    elif (((not(compTurn) or not(single)) and x > 75 and x < 225) or (single and compTurn and x == 2)):
         print("entered x")
         if (compTurn):
             print("second row")
         x = 150
-        if ((not(compTurn) and y < 225 and y > 75) or (single and compTurn and y == 0)):
+        if (((not(compTurn) or not(single)) and y < 225 and y > 75) or (single and compTurn and y == 0)):
             print("entered y 2", pressed[2])
             if (not(pressed[2])):
                 print("hi", "pressed 2")
@@ -459,7 +459,7 @@ def clickWin (x, y):
                 valid = True
                 x1 = 2
                 y1 = 0
-        elif ((not(compTurn) and y < 75 and y > -75) or (single and compTurn and y == 1)):
+        elif (((not(compTurn) or not(single)) and y < 75 and y > -75) or (single and compTurn and y == 1)):
             print("entered y 5", pressed[5])
             if (not(pressed[5])):
                 print("hi", "pressed 5")
@@ -468,7 +468,7 @@ def clickWin (x, y):
                 valid = True
                 x1 = 2
                 y1 = 1
-        elif ((not(compTurn) and y < -75 and y > -225) or (single and compTurn and y == 2)):
+        elif (((not(compTurn) or not(single)) and y < -75 and y > -225) or (single and compTurn and y == 2)):
             print("entered y 8", pressed[8])
             if (not(pressed[8])):
                 print("hi", "pressed 8")
